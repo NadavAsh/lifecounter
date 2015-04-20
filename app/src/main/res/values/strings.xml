@@ -2,7 +2,8 @@
 <resources>
 
     <string name="app_name">Life Counter</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+    <string name="player_num">Player %d</string>
+    <string name="life">Life: %d</string>
+    <string name="action_add_player">Add player</string>
 </resources>
