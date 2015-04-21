@@ -19,12 +19,16 @@ public class PlayerLayout extends RelativeLayout {
     private TextView playerText;
     private TextView lifeText;
 
-    public PlayerLayout(Context context, final int playerId) {
+    public PlayerLayout(Context context, int playerId) {
+        this(context, playerId, Player.DEFAULT_LIFE);
+    }
+
+    public PlayerLayout(Context context, int playerId, int lives) {
         super(context);
         View.inflate(context, R.layout.layout_player, this);
 
         res = getResources();
-        player = new Player(playerId);
+        player = new Player(playerId, lives);
 
         playerText = (TextView)findViewById(R.id.text_player_num);
         playerText.setText(String.format(res.getString(R.string.player_num), player.getId()));
@@ -55,7 +59,6 @@ public class PlayerLayout extends RelativeLayout {
                 }
             }
         };
-
         addBtn.setOnClickListener(clickListener);
         addFiveBtn.setOnClickListener(clickListener);
         removeBtn.setOnClickListener(clickListener);

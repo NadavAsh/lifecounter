@@ -24,52 +24,80 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button_add"
-        android:src="@android:drawable/arrow_up_float"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/text_life"
-        android:layout_alignEnd="@+id/text_life"
-        android:text="+"
-        android:textSize="16pt" />
+        android:weightSum="1"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentBottom="false">
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_remove"
-        android:src="@android:drawable/arrow_down_float"
-        android:text="-"
-        android:textSize="16pt"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/button_add"
-        android:layout_toStartOf="@+id/button_add" />
+    </LinearLayout>
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button_remove5"
-        android:src="@android:drawable/arrow_down_float"
-        android:text="5-"
-        android:textSize="16pt"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:weightSum="1"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true">
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_add5"
-        android:src="@android:drawable/arrow_up_float"
-        android:text="5+"
-        android:textSize="16pt"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/button_remove5"
-        android:layout_toEndOf="@+id/button_remove5" />
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:id="@+id/button_remove5"
+            android:src="@android:drawable/arrow_down_float"
+            android:text="-5"
+            android:textSize="16pt"
+            android:layout_alignBottom="@+id/button_remove"
+            android:layout_toRightOf="@+id/button_remove"
+            android:layout_toEndOf="@+id/button_remove" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:id="@+id/button_add5"
+            android:src="@android:drawable/arrow_down_float"
+            android:text="+5"
+            android:textSize="16pt"
+            android:layout_alignBottom="@+id/button_add"
+            android:layout_toRightOf="@+id/button_add"
+            android:layout_toEndOf="@+id/button_add" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:id="@+id/button_remove"
+            android:src="@android:drawable/arrow_down_float"
+            android:text="-"
+            android:textSize="16pt"
+            android:layout_below="@+id/text_player_num"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:id="@+id/button_add"
+            android:src="@android:drawable/arrow_down_float"
+            android:text="+"
+            android:textSize="16pt"
+            android:layout_below="@+id/text_player_num"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </LinearLayout>
 
 </RelativeLayout>
